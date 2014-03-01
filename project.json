@@ -1,16 +1,16 @@
 {
   "requires": {
-    project_name: "string", 
-    author_name: "string",
-    author_email: "string"
-    project_name: "string",
-    project_subname: "string",
-    project_fullname: "string",
-    version_major: "number",
-    version_minor: "number",
-    version_patch: "number"
+    "project_name"    : "string",
+    "author_name"     : "string",
+    "author_email"    : "string",
+    "project_name"    : "string",
+    "project_subname" : "string",
+    "project_fullname": "string"
   },
   "optional": {
-    cmake_minimum: "2.8.3", 
+    "cmake_minimum": "2.8.3",
+    "version_major"   : "0",
+    "version_minor"   : "1",
+    "version_patch"   : "0"
   }
 }
