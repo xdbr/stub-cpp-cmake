@@ -18,28 +18,28 @@
 #define {{project_name}}_TEST_STATIC_ASSERTIONS @{{project_name}}_TEST_STATIC_ASSERTIONS@
 
 
-#define _sisSetter(type, name)                  \
+#define _{{project_name}}Setter(type, name)                  \
         void name(type x) {name##_ = x;}
 
-#define _sisGetter(type, name)                  \
+#define _{{project_name}}Getter(type, name)                  \
         type name() const {return name##_;}
 
-#define _sisGetSet(type, name)                  \
+#define _{{project_name}}GetSet(type, name)                  \
         _{{project_name}}_Setter(type, name)                 \
         _{{project_name}}_Getter(type, name)
 
-#define _sisAttributeRW(type, name, default)    \
+#define _{{project_name}}AttributeRW(type, name, default)    \
         void name(type x) {name##_ = x;}        \
         type name() const {return name##_;}     \
         type name##_ = { default }
 
 #ifndef NDEBUG
-#define _sisVar(x) (std::wcerr << #x << L": '" << x << L"'" << std::endl)
-#define _sisHere   (std::wcerr << __FILE__ << "@" << __LINE__ << L": HERE" << std::endl)
-#define _sisMsg(x) (std::wcerr << x << std::endl)
+#define _{{project_name}}Var(x) (std::wcerr << #x << L": '" << x << L"'" << std::endl)
+#define _{{project_name}}Here   (std::wcerr << __FILE__ << "@" << __LINE__ << L": HERE" << std::endl)
+#define _{{project_name}}Msg(x) (std::wcerr << x << std::endl)
 #else /* NDEBUG */
-#define _sisVar(x)
-#define _sisHere
+#define _{{project_name}}Var(x)
+#define _{{project_name}}Here
 #endif /* NDEBUG */
 
 #endif /* {{project_name}}_CONFIG_HPP_IN_JX1JBT4V */
