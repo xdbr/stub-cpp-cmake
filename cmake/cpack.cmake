@@ -1,0 +1,13 @@
+### CPack
+file(GLOB HIDDENFILES ".*")
+set(CPACK_GENERATOR                     "TGZ")
+set(CPACK_SOURCE_GENERATOR              "TGZ")
+set(CPACK_SOURCE_IGNORE_FILES           "${HIDDENFILES};build/;doc/;var/*;lib/;text/")
+set(CPACK_DEBIAN_PACKAGE_MAINTAINER     "{{author_name}} <{{author_email}}>")
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY   "{{project_fullname}}")
+set(CPACK_PACKAGE_VENDOR                "{{author_name}}")
+set(CPACK_PACKAGE_VERSION_MAJOR         ${{{project_name}}_VERSION_MAJOR})
+set(CPACK_PACKAGE_VERSION_MINOR         ${{{project_name}}_VERSION_MINOR})
+set(CPACK_PACKAGE_VERSION_PATCH         ${{{project_name}}_VERSION_PATCH})
+set(CPACK_PACKAGE_CONTACT               "{{author_name}} <{{author_email}}>")
+include( CPack )
